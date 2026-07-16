@@ -1,0 +1,40 @@
+name: wild_log
+description: "Personal adventure and expedition tracker — field log for outdoor life."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State
+  flutter_riverpod: ^2.6.1
+
+  # Local persistence (SQLite via Drift)
+  drift: ^2.26.0
+  drift_flutter: ^0.2.4
+
+  # Maps
+  flutter_map: ^8.1.1
+  latlong2: ^0.9.1
+
+  # Charts
+  fl_chart: ^0.70.2
+
+  # UI / utils
+  google_fonts: ^6.2.1
+  intl: ^0.20.2
+  uuid: ^4.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  drift_dev: ^2.26.0
+  build_runner: ^2.4.15
+
+flutter:
+  uses-material-design: true
