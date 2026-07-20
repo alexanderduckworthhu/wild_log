@@ -19,7 +19,7 @@ abstract final class AppStrings {
   static const summitSubtitle = 'How you have been showing up outside.';
   static const dayStreak = 'Day streak';
   static const coldStreakHint =
-      'No active streak — log today to start one again.';
+      'No active streak, log today to start one again.';
   static String hotStreakHint(int longestDays) =>
       'On a roll. Longest run: $longestDays days.';
   static const sessionsLabel = 'Sessions';
@@ -58,7 +58,7 @@ abstract final class AppStrings {
   static const mapEmptyPins =
       'No pins yet. Turn on Pin on the map when you log a day.';
   static String mapPinCount(int count) =>
-      '$count places — tap a marker to open';
+      '$count places, tap a marker to open';
   static String mapMarkerSemantics(String activity, String title) =>
       '$activity session: $title';
 
@@ -67,7 +67,7 @@ abstract final class AppStrings {
   static const formEditTitle = 'Edit session';
   static const formWhatDoing = 'What were you doing?';
   static const formNameDay = 'Name this day';
-  static const formNameHint = 'Optional — e.g. Morning ridge push';
+  static const formNameHint = 'Optional, e.g. Morning ridge push';
   static const formNameHelper = 'Leave blank and the app will name it.';
   static const formWhen = 'When';
   static const formDuration = 'How long (minutes)';
@@ -130,14 +130,14 @@ abstract final class AppStrings {
   // Milestones / records (domain-facing defaults)
   static const firstWaypointTitle = 'First waypoint';
   static const firstWaypointDetail =
-      'The log is quiet — tap Log a day when you get back outside.';
+      'The log is quiet, tap Log a day when you get back outside.';
   static String sessionsMilestoneTitle(int target) =>
       '$target days in the book';
   static String sessionsMilestoneDetail(int total) =>
       'You are at $total. The next entry still counts.';
   static const weekStreakTitle = 'A full week outside';
   static const weekStreakCold =
-      'Start today — tomorrow will thank you.';
+      'Start today, tomorrow will thank you.';
   static const weekStreakWarm = 'Solid rhythm. A few more days makes a week.';
   static const keepFireTitle = 'Keep the fire';
   static const keepFireDetail =

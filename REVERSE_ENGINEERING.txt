@@ -1,12 +1,12 @@
 ================================================================================
-WILD LOG — REVERSE ENGINEERING GUIDE
+WILD LOG. REVERSE ENGINEERING GUIDE
 ================================================================================
 Purpose: Teach yourself how this Flutter portfolio app works by walking backward
 from the Summit dashboard and Expedition Map to Drift rows and Riverpod wires.
 Read with the code open side-by-side.
 
 Audience: You (career-changer / INFJ who needs the WHY). Not for hiring managers
-— they get the README and docs/talking_points.md.
+,  they get the README and docs/talking_points.md.
 
 Sibling projects: multilingual-rag-assistant, where-needs-overlap,
 climate-migration-risk-index, and others are SEPARATE folders under Portfolio/.
@@ -18,8 +18,8 @@ Do not mix their pipelines, data, or apps. This guide never asks you to edit the
 --------------------------------------------------------------------------------
 Question the whole app answers:
 
-  "Can I keep a meaningful, offline field log of outdoor life — hikes, climbs,
-   snowboard days, camps, range sessions, hunts, water — and see my own
+  "Can I keep a meaningful, offline field log of outdoor life, hikes, climbs,
+   snowboard days, camps, range sessions, hunts, water, and see my own
    consistency and personal peaks without turning it into a vanity social feed?"
 
 If a feature does not improve honest logging, activity-specific truthfulness,
@@ -59,13 +59,13 @@ no generic purple Material clone, no "AI coach").
 Mental model:
   SHELL       = "three rooms + one write door (FAB)"
   STREAM      = "Drift watch → UI never polls"
-  DOMAIN STATS= "pure Dart from sessions — UI just paints"
+  DOMAIN STATS= "pure Dart from sessions. UI just paints"
   DETAILS JSON= "activity-specific truth without schema explosion"
-  SEED        = "demo-ready first open — delete anytime"
+  SEED        = "demo-ready first open, delete anytime"
 
 
 --------------------------------------------------------------------------------
-3. STATE MANAGEMENT — WHY RIVERPOD
+3. STATE MANAGEMENT. WHY RIVERPOD
 --------------------------------------------------------------------------------
 File: lib/providers/providers.dart
 
@@ -77,12 +77,12 @@ File: lib/providers/providers.dart
   shellTabProvider          → which bottom tab is active
 
 Why Riverpod (recommended here):
-  1. Explicit dependency graph — DB → repo → stream → derived stats
+  1. Explicit dependency graph. DB → repo → stream → derived stats
   2. No BuildContext required to read/write outside widgets
   3. StreamProvider matches Drift's reactive queries naturally
   4. Easy to unit-test DashboardStats without Flutter widgets
   5. ProviderScope at root keeps the app demo-simple (no codegen required
-     for these providers — riverpod_generator is available if you grow)
+     for these providers, riverpod_generator is available if you grow)
 
 Not chosen: setState-only (won't scale across map + chart + form),
 Bloc (more ceremony for a single-user offline log), GetX (weaker for
@@ -90,12 +90,12 @@ portfolio signal of deliberate architecture).
 
 
 --------------------------------------------------------------------------------
-4. DATA MODEL — SHARED + ACTIVITY-SPECIFIC
+4. DATA MODEL. SHARED + ACTIVITY-SPECIFIC
 --------------------------------------------------------------------------------
 Domain types:
-  lib/domain/activity_type.dart   — enum + icons + field specs
-  lib/domain/session.dart         — AdventureSession
-  lib/domain/dashboard_stats.dart — streaks, PRs, milestones (pure functions)
+  lib/domain/activity_type.dart  , enum + icons + field specs
+  lib/domain/session.dart        . AdventureSession
+  lib/domain/dashboard_stats.dart, streaks, PRs, milestones (pure functions)
 
 Drift table: lib/data/database/tables.dart → Sessions
 
@@ -131,7 +131,7 @@ Design rule:
 
 
 --------------------------------------------------------------------------------
-5. STORAGE — DRIFT (SQLITE), NOT HIVE
+5. STORAGE. DRIFT (SQLITE), NOT HIVE
 --------------------------------------------------------------------------------
 Files:
   lib/data/database/app_database.dart   (+ generated app_database.g.dart)
@@ -158,7 +158,7 @@ data / reinstall to re-trigger seed, or delete rows from Logbook.
 
 
 --------------------------------------------------------------------------------
-6. MAP SCREEN — flutter_map + OpenStreetMap
+6. MAP SCREEN, flutter_map + OpenStreetMap
 --------------------------------------------------------------------------------
 File: lib/features/map/expedition_map_screen.dart
 
@@ -181,18 +181,18 @@ File: lib/features/dashboard/dashboard_screen.dart
 Stats brain: lib/domain/dashboard_stats.dart
 
 Shows:
-  · Current day-streak (+ longest) — calendar days with ≥1 session
+  · Current day-streak (+ longest), calendar days with ≥1 session
   · Totals: sessions, elevation m, distance km
-  · fl_chart BarChart — sessions by activity type (icon labels)
-  · Personal records — highest gain, longest distance, hardest difficulty
-  · Next milestone — progressive session targets, then streak, then "keep fire"
+  · fl_chart BarChart, sessions by activity type (icon labels)
+  · Personal records, highest gain, longest distance, hardest difficulty
+  · Next milestone, progressive session targets, then streak, then "keep fire"
 
 Streak rule (read the code):
   Unique session dates sorted; consecutive calendar days.
   Current streak is 0 unless last activity day is today or yesterday.
 
 Milestone voice:
-  Motivating without gamification sleaze — purpose over profit.
+  Motivating without gamification sleaze, purpose over profit.
 
 
 --------------------------------------------------------------------------------
@@ -220,7 +220,7 @@ Typography:
 
 Hard aesthetic rules used here:
   · Dark mode only (night after the trail)
-  · Sharp corners (BorderRadius ~0–2) — gear, not candy
+  · Sharp corners (BorderRadius ~0–2), gear, not candy
   · No purple gradients, no cream-serif brochure look
   · Activity "field callsigns" (TRAIL, WALL, LINE, RANGE…) over soft labels
   · Brand "WILD LOG" / screen "SUMMIT" as hero signals on the first tab
@@ -228,12 +228,12 @@ Hard aesthetic rules used here:
 INFJ design decisions:
   Notes field copy invites meaning, not metrics theater.
   Milestone text frames consistency as integrity, not addiction.
-  Seed notes sound like a real journal — reverse-engineer those strings
+  Seed notes sound like a real journal, reverse-engineer those strings
   if you want the app to keep feeling like yours.
 
 
 --------------------------------------------------------------------------------
-9. FILE MAP — WHAT EACH FILE OWNS
+9. FILE MAP. WHAT EACH FILE OWNS
 --------------------------------------------------------------------------------
 lib/main.dart                 entry + system UI chrome
 lib/app.dart                  ProviderScope + theme + home shell
@@ -285,10 +285,10 @@ Demo path for screen recording:
 11. COMMON EXTENSIONS (only if they serve the one idea)
 --------------------------------------------------------------------------------
   · Export JSON/CSV of the log (ownership)
-  · Optional photo attach (path on device — still offline)
+  · Optional photo attach (path on device, still offline)
   · Bucket-list screen (Aurora, Hang Son Doong, bioluminescence, wonders)
-  · Home-widget streak (platform channels) — later
-  · Cloud sync — only if you still own the meaning offline-first
+  · Home-widget streak (platform channels), later
+  · Cloud sync, only if you still own the meaning offline-first
 
 Do NOT add: social feed, ads, crypto, purple "AI" chrome.
 

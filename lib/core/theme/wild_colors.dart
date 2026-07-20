@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Alpine night kit — muted sage / sandstone / glacier, not acid-green-on-black.
+/// Alpine night kit, muted sage / sandstone / glacier, not acid-green-on-black.
 ///
 /// Tokens live here so widgets never hardcode hex values.
 abstract final class WildColors {

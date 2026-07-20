@@ -28,7 +28,7 @@ class AppDatabase extends _$AppDatabase {
       _seed(
         uuid,
         ActivityType.hike,
-        'Skyline ridgeline — morning push',
+        'Skyline ridgeline, morning push',
         now.subtract(const Duration(days: 1)),
         210,
         'Banff National Park',
@@ -38,12 +38,12 @@ class AppDatabase extends _$AppDatabase {
         elevation: 820,
         distance: 14.2,
         details: {'trailName': 'Skyline Trail (section)'},
-        notes: 'Cold start. Found quiet above the treeline — that INFJ reset.',
+        notes: 'Cold start. Found quiet above the treeline, that INFJ reset.',
       ),
       _seed(
         uuid,
         ActivityType.snowboard,
-        'Powder day — north bowls',
+        'Powder day, north bowls',
         now.subtract(const Duration(days: 3)),
         300,
         'Whistler Blackcomb',
@@ -64,7 +64,7 @@ class AppDatabase extends _$AppDatabase {
         'Multi-pitch afternoon',
         now.subtract(const Duration(days: 5)),
         180,
-        'Squamish — The Chief',
+        'Squamish: The Chief',
         49.6833,
         -123.1500,
         4,
@@ -88,7 +88,7 @@ class AppDatabase extends _$AppDatabase {
       _seed(
         uuid,
         ActivityType.shoot,
-        'Zero confirmation — 200m',
+        'Zero confirmation: 200m',
         now.subtract(const Duration(days: 10)),
         90,
         'Local outdoor range',
@@ -105,7 +105,7 @@ class AppDatabase extends _$AppDatabase {
       _seed(
         uuid,
         ActivityType.hunt,
-        'Dawn glassing — ridge sit',
+        'Dawn glassing, ridge sit',
         now.subtract(const Duration(days: 14)),
         360,
         'Interior highland',
@@ -118,7 +118,7 @@ class AppDatabase extends _$AppDatabase {
       _seed(
         uuid,
         ActivityType.jetski,
-        'Coastal throttle — clear water',
+        'Coastal throttle, clear water',
         now.subtract(const Duration(days: 18)),
         75,
         'Sunshine Coast inlet',
@@ -132,7 +132,7 @@ class AppDatabase extends _$AppDatabase {
       _seed(
         uuid,
         ActivityType.hike,
-        'Night ridge — stargazing finish',
+        'Night ridge, stargazing finish',
         now.subtract(const Duration(days: 21)),
         160,
         'Cypress Mountain',

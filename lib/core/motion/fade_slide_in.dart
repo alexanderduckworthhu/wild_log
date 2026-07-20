@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/app_constants.dart';
 
-/// Soft entrance for list sections — subtle, not theatrical.
+/// Soft entrance for list sections, subtle, not theatrical.
 class FadeSlideIn extends StatefulWidget {
   const FadeSlideIn({
     super.key,
