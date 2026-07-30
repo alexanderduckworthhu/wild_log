@@ -5,7 +5,7 @@ Purpose: Teach yourself how this Flutter portfolio app works by walking backward
 from the Summit dashboard and Expedition Map to Drift rows and Riverpod wires.
 Read with the code open side-by-side.
 
-Audience: You (career-changer / INFJ who needs the WHY). Not for hiring managers
+Audience: You (the builder who needs the WHY). Not for hiring managers
 ,  they get the README and docs/talking_points.md.
 
 Sibling projects: multilingual-rag-assistant, where-needs-overlap,
@@ -26,7 +26,7 @@ If a feature does not improve honest logging, activity-specific truthfulness,
 local ownership of data, map memory, or motivation-with-integrity (streaks/
 milestones that serve purpose, not dopamine farms), it does not belong.
 
-That filter stops INFJ overbuilding (no cloud sync theater, no leaderboards,
+That filter stops scope creep (no cloud sync theater, no leaderboards,
 no generic purple Material clone, no "AI coach").
 
 
@@ -225,7 +225,7 @@ Hard aesthetic rules used here:
   · Activity "field callsigns" (TRAIL, WALL, LINE, RANGE…) over soft labels
   · Brand "WILD LOG" / screen "SUMMIT" as hero signals on the first tab
 
-INFJ design decisions:
+Design decisions:
   Notes field copy invites meaning, not metrics theater.
   Milestone text frames consistency as integrity, not addiction.
   Seed notes sound like a real journal, reverse-engineer those strings

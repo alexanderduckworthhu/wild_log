@@ -38,7 +38,7 @@ class AppDatabase extends _$AppDatabase {
         elevation: 820,
         distance: 14.2,
         details: {'trailName': 'Skyline Trail (section)'},
-        notes: 'Cold start. Found quiet above the treeline, that INFJ reset.',
+        notes: 'Cold start. Found quiet above the treeline, a good reset.',
       ),
       _seed(
         uuid,

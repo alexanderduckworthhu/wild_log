@@ -12,7 +12,7 @@ Most trail apps optimize for sharing and monetized coaching. Wild Log solves a n
 - **Drift (SQLite) over Hive**. Chosen because Summit needs ordered history, type counts, and elevation/distance aggregates. Hive fits key-value prefs; relational queries fit an expedition log.
 - **flutter_map + OpenStreetMap tiles**. Chosen to pin waypoints without a Google Maps billing account. Trade-off: must respect OSM tile usage policy; demo seeds a small pin set.
 - **Shared columns + `detailsJson`**. Chosen so elevation/distance stay queryable while snow conditions, range distance, and route grade stay type-native without a nullable-column explosion.
-- **Single `AppStrings` + `WildColors` / `WildSpace` tokens**. Chosen so French localization and design-system discipline are additive for Geneva/Neuchâtel audiences, without scattering hex and copy through widgets.
+- **Single `AppStrings` + `WildColors` / `WildSpace` tokens**. Chosen so French localization and design-system discipline are additive for multilingual users, without scattering hex and copy through widgets.
 
 ## Results & metrics
 
@@ -60,7 +60,7 @@ No third-party analytics. No account system. Suitable as a portfolio demo; not a
 
 1. **GPX / HealthKit import**. Reduce manual lat/lng entry by importing a track and deriving distance/elevation.
 2. **Encrypted export bundle**. JSON/ZIP export with optional passphrase for backup without full cloud sync.
-3. **French locale (`fr_CH`)**. Wire `AppStrings` through `flutter_localizations` / ARB for Geneva interviews.
+3. **French locale (`fr_CH`)**. Wire `AppStrings` through `flutter_localizations` / ARB for multilingual users.
 
 ## Architecture
 
